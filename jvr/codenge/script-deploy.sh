@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Caminho para a chave privada
-KEY_PATH="oracle-jvr-private.key"
+KEY_PATH="ssh-key-2024-10-14.key"
 
 # SSH para o servidor remoto
-ssh -i "$KEY_PATH" ubuntu@129.148.57.192 << 'EOF'
+ssh -i "$KEY_PATH" ubuntu@168.75.72.244 << 'EOF'
     # Comandos a serem executados remotamente via SSH
 
     # Acessar a pasta jvr/codenge
