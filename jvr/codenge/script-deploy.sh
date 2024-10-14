@@ -8,7 +8,7 @@ ssh -i "$KEY_PATH" ubuntu@168.75.72.244 << 'EOF'
     # Comandos a serem executados remotamente via SSH
 
     # Acessar a pasta locaTemporada/codenge
-    cd locaTemporada/codenge
+    cd locaTemporada/jvr/codenge
 
     # Executar git pull
     git pull
