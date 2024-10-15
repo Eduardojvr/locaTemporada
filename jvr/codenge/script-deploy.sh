@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Caminho para a chave privada
-KEY_PATH="ssh-key-2024-10-14.key"
+KEY_PATH="locacao.key"
 
 # SSH para o servidor remoto
-ssh -i "$KEY_PATH" ubuntu@168.75.72.244 << 'EOF'
+ssh -i "$KEY_PATH" ubuntu@164.152.44.23 << 'EOF'
     # Comandos a serem executados remotamente via SSH
 
     # Acessar a pasta locaTemporada/codenge
