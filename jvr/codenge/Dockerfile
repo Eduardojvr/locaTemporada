@@ -17,8 +17,8 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY default.conf /etc/nginx/conf.d
 
 # Copiar os certificados SSL (ou use volumes se os certificados estiverem fora do contêiner)
-COPY /etc/self-signed.crt
-COPY /etc/self-signed.key
+COPY /etc/self-signed.crt /etc/nginx/certs/self-signed.crt
+COPY /etc/self-signed.key /etc/nginx/certs/self-signed.key
 
 # Expor as portas HTTP e HTTPS
 EXPOSE 80 443
