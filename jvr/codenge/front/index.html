@@ -25,6 +25,8 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -39,6 +41,14 @@
 </head>
 
 <body>
+
+  <div>
+
+    <a href="https://wa.me/5561998125003" target="_blank" id="whatsapp-icon" style="position:fixed; bottom:102px; right:20px; z-index:1000; display:none;">
+      <i class="fab fa-whatsapp" style="font-size:48px; color:#25D366; padding-right: 0px;"></i>
+  </a>
+
+  </div>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
@@ -718,7 +728,11 @@
                   <h4>Entre em contato conosco</h4>
                   <p>
                     Brasília - DF - Brasil <br>
-                    <strong>Whatsapp:</strong> +55 61 99812-5003<br>
+                    <strong style="display:inline;">Whatsapp:</strong> +55 61 99812-5003
+                    <a href="https://wa.me/5561998125003" target="_blank" style="display:inline;">
+                        <i class="fab fa-whatsapp" style="font-size:24px; margin-left:10px;"></i>
+                    </a>
+                    
                     <!-- <strong>Email:</strong> atendimento@codenge.com<br> -->
                   </p>
                 </div>
@@ -797,6 +811,19 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
+  <script>
+    // Função para verificar a posição do scroll
+    window.onscroll = function() {
+        var whatsappIcon = document.getElementById("whatsapp-icon");
+        if (window.scrollY > 0) {
+            // Mostra o ícone quando a página é rolada para baixo
+            whatsappIcon.style.display = "block";
+        } else {
+            // Esconde o ícone quando está no topo
+            whatsappIcon.style.display = "none";
+        }
+    };
+    </script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
