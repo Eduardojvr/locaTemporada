@@ -8,7 +8,7 @@ services:
       - "--providers.docker"
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.eduardojvr10@gmail.com"
+      - "--certificatesresolvers.myresolver.acme.email=eduardojvr10@gmail.com"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
     ports:
       - "80:80"
