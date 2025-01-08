@@ -1,17 +1,16 @@
 version: '3.7'
 
-services:
-  traefik:
-    image: traefik:latest
-    command:
+traefik:
+  image: traefik:latest
+  command:
     - "--api.insecure=true"
     - "--providers.docker"
+    - "--entrypoints.web.address=:80"
     - "--entrypoints.websecure.address=:443"
+    - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
     - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
     - "--certificatesresolvers.myresolver.acme.email=eduardojvr10@gmail.com"
     - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
-    - "--certificatesresolvers.myresolver.acme.caServer=https://acme-v02.api.letsencrypt.org/directory"
-
     ports:
       - "80:80"
       - "443:443"
