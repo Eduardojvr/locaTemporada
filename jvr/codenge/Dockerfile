@@ -1,3 +1,4 @@
+# Dockerfile
 FROM node:10.4.0 as build-stage
 
 WORKDIR /app
@@ -7,7 +8,6 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-
 
 FROM nginx:stable-alpine as production-stage
 COPY --from=build-stage /app/front /usr/share/nginx/html
